@@ -21,7 +21,7 @@ If you think that you can add a new feature or want to fix a bug, we invite you 
 
 10. Add a reference(remote) to the original repository.
 
-11. ```git remote add upstream https://github.com/adityabisht02/betterPoll-Android.git```
+11. ```git remote add upstream https://github.com/adityabisht02/BetterPoll-Android.git```
 
 12. Check the remotes for this repository.
     ```git remote -v```
