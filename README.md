@@ -18,7 +18,7 @@ The User side of the application is what the students(assuming a college campus)
 ![image](https://user-images.githubusercontent.com/89146189/193784532-11302b38-9355-4959-8cd7-7648b9760141.png)
 
 
-## 😄[CONTRIBUTING GUIDELINES](https://github.com/HawkItzme/KeepIt/blob/ContriBranch/Contribution.md)
+## 😄[CONTRIBUTING GUIDELINES](https://github.com/MohammadKaif1/BetterPoll-Android/blob/readme/CONTRIBUTING.md)
 
 
 
