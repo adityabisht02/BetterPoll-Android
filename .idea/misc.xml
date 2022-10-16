@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/BetterPoll-Android/app/src/main/res/layout/activity_campus_to_iffco.xml" value="0.27447916666666666" />
+        <entry key="..\:/BetterPoll-Android/app/src/main/res/layout/activity_main.xml" value="0.1265625" />
+        <entry key="..\:/BetterPoll-Android/app/src/main/res/layout/activity_pre_loader_screen.xml" value="0.27447916666666666" />
+        <entry key="..\:/BetterPoll-Android/app/src/main/res/layout/toolbar.xml" value="0.536" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_campus_to_iffco.xml" value="0.1265625" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_shuttle_service.xml" value="0.1265625" />
       </map>
