@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class adityaLoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     EditText editTextUniversityName;
     EditText editTextUsername;
@@ -39,11 +39,11 @@ public class adityaLoginActivity extends AppCompatActivity {
                 String password=editTextPassword.getText().toString();
 
                 if(username.equals("aditya") && password.equals("aditya")){
-                    Intent intent = new Intent(adityaLoginActivity.this, ShuttleServiceActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, ShuttleServiceActivity.class);
                     startActivity(intent);
                 }
                 else{
-                    Toast.makeText(adityaLoginActivity.this, "Authentication failed.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_LONG).show();
                 }
             }
         });
