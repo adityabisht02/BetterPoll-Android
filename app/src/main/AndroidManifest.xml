@@ -9,18 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BetterPollandroid">
+        
         <activity
             android:name=".MealRemindersActivity"
             android:exported="true"/>
+            
+         <activity
+            android:name=".adityaLoginActivity"
+            android:exported="false" />
         <!-- android:theme="@style/Theme.BetterPollandroid" -->
+        
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+            
         <activity
             android:name=".ShuttleServiceActivity"
             android:exported="false" />
+            
         <activity
-            android:name=".adityaLoginActivity"
+            android:name=".PreLoaderScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

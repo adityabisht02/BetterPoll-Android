@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Booking List"
+        android:icon="@drawable/ic_baseline_book_24"
+        android:id="@+id/booking"/>
+    <item
+        android:title="Interaction"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:id="@+id/interaction"/>
+    <item
+        android:title="Alerts"
+        android:icon="@drawable/ic_baseline_alarm_24"
+        android:id="@+id/alert"/>
+</menu>
