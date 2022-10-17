@@ -39,7 +39,7 @@ public class adityaLoginActivity extends AppCompatActivity {
                 String password=editTextPassword.getText().toString();
 
                 if(username.equals("aditya") && password.equals("aditya")){
-                    Intent intent = new Intent(adityaLoginActivity.this, MealRemindersActivity.class);
+                    Intent intent = new Intent(adityaLoginActivity.this, ShuttleServiceActivity.class);
                     startActivity(intent);
                 }
                 else{
