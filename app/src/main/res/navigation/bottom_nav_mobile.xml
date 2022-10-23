@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_mobile"
+    app:startDestination="@id/shuttleBookingFragment2">
+
+    <fragment
+        android:id="@+id/shuttleBookingFragment2"
+        android:name="com.example.betterpoll_android.ShuttleBookingFragment"
+        android:label="fragment_shuttle_booking_list"
+        tools:layout="@layout/fragment_shuttle_booking_list" />
+    <fragment
+        android:id="@+id/interactionFragment"
+        android:name="com.example.betterpoll_android.InteractionFragment"
+        android:label="fragment_interaction_section"
+        tools:layout="@layout/fragment_interaction_section" />
+    <fragment
+        android:id="@+id/mealRemindersFragment"
+        android:name="com.example.betterpoll_android.MealRemindersFragment"
+        android:label="fragment_meal_reminders"
+        tools:layout="@layout/fragment_meal_reminders" />
+    <fragment
+        android:id="@+id/availableShuttlesFragment"
+        android:name="com.example.betterpoll_android.AvailableShuttlesFragment"
+        android:label="fragment_available_shuttles"
+        tools:layout="@layout/fragment_available_shuttles" />
+</navigation>
