@@ -5,16 +5,16 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import com.example.betterpoll_android.databinding.FragmentInteractionSectionBinding;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-public class InteractionFragment extends Fragment {
-private FragmentInteractionSectionBinding fragmentInteractionSectionBinding;
+import com.example.betterpoll_android.databinding.FragmentShuttleBookingListBinding;
 
 
+public class ShuttleBookingFragment extends Fragment {
+    private FragmentShuttleBookingListBinding fragmentShuttleBookingListBinding;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +25,8 @@ private FragmentInteractionSectionBinding fragmentInteractionSectionBinding;
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        fragmentInteractionSectionBinding = FragmentInteractionSectionBinding.inflate(inflater, container, false);
-        View root = fragmentInteractionSectionBinding.getRoot();
+        fragmentShuttleBookingListBinding= FragmentShuttleBookingListBinding.inflate(inflater, container, false);
+        View root =fragmentShuttleBookingListBinding.getRoot();
 
 
         return root;

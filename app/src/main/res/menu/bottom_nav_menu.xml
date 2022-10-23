@@ -4,13 +4,19 @@
     <item
         android:title="Booking List"
         android:icon="@drawable/ic_baseline_book_24"
-        android:id="@+id/booking"/>
+        android:id="@+id/shuttleBookingFragment2"/>
     <item
         android:title="Interaction"
         android:icon="@drawable/ic_baseline_chat_24"
-        android:id="@+id/interaction"/>
+        android:id="@+id/interactionFragment"/>
     <item
         android:title="Alerts"
         android:icon="@drawable/ic_baseline_alarm_24"
-        android:id="@+id/alert"/>
+        android:id="@+id/mealRemindersFragment"/>
+    <!--Can be removed-->
+    <item
+        android:title="Test for shuttle list"
+        android:icon="@drawable/ic_baseline_alarm_24"
+        android:id=" @+id/availableShuttlesFragment"/>
+
 </menu>
