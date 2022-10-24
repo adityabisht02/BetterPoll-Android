@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_shuttle_booking_list" />
     <fragment
         android:id="@+id/interactionFragment"
-        android:name="com.example.betterpoll_android.InteractionFragment"
+        android:name="com.example.betterpoll_android.InteractSectionFragment"
         android:label="fragment_interaction_section"
         tools:layout="@layout/fragment_interaction_section" />
     <fragment

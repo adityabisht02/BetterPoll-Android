@@ -3,30 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/activity_book_shuttle.xml" value="0.259375" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/activity_main.xml" value="0.10260416666666666" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/activity_pre_loader_screen.xml" value="0.10260416666666666" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/activity_shuttle_service.xml" value="0.10260416666666666" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/activity_sign_in.xml" value="0.11770833333333333" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/card_layout.xml" value="0.2553846153846154" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/card_shuttle.xml" value="0.10260416666666666" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/fragment_available_shuttles.xml" value="0.2" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/fragment_interaction_section.xml" value="0.10260416666666666" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/fragment_meal_reminders.xml" value="0.134375" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/fragment_shuttle_booking_list.xml" value="0.1" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/layout/toolbar.xml" value="0.10260416666666666" />
-        <entry key="..\:/Users/Sumayyah/contri/BetterPoll-Android/app/src/main/res/menu/bottom_nav_menu.xml" value="0.24375" />
+        <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/2/drawable/ic_baseline_person_24.xml" value="0.2703125" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/acitivity_landing_page.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_book_shuttle.xml" value="0.264" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_campus_to_iffco.xml" value="0.1265625" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_meal_reminders.xml" value="0.12" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_pre_loader_screen.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_shuttle_service.xml" value="0.176" />
+        <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_shuttle_service.xml" value="0.264" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/activity_sign_in.xml" value="0.176" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/admin/layout/activity_admin_functions.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/admin/layout/interact_card_layout.xml" value="0.264" />
+        <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/available_shuttles_card_layout.xml" value="0.264" />
+        <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/card_layout.xml" value="0.14266304347826086" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/fragment_alert.xml" value="0.2" />
-        <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/fragment_available_shuttles.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/fragment_available_shuttles.xml" value="0.2" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/fragment_booking_list.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/fragment_interaction.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/adity/Desktop/BetterPollandroid/app/src/main/res/layout/fragment_interaction_section.xml" value="0.103125" />

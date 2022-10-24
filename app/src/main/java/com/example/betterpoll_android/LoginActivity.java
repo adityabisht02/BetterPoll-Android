@@ -38,7 +38,8 @@ public class LoginActivity extends AppCompatActivity {
                 String password=editTextPassword.getText().toString();
 
                 if(username.equals("aditya") && password.equals("aditya")){
-                    Intent intent = new Intent(LoginActivity.this, ShuttleServiceActivity.class);
+                    //put admin functions as the destination for testing
+                    Intent intent = new Intent(LoginActivity.this, AdminFunctionsActivity.class);
                     startActivity(intent);
                 }
                 else{

@@ -30,7 +30,6 @@ public class ShuttleAdapter extends RecyclerView.Adapter<ShuttleAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ShuttleAdapter.ViewHolder holder, int position) {
-
         ShuttleModel model = shuttleModelArrayList.get(position);
         holder.ShuttleNameTV.setText(model.getCourse_name());
 

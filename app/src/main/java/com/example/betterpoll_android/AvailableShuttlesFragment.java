@@ -41,10 +41,7 @@ public class AvailableShuttlesFragment extends Fragment {
         shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
         shuttleModelArrayList.add(new ShuttleModel("IFFCO Chowk to Campus",  R.drawable.ic_baseline_directions_bus_24));
         shuttleModelArrayList.add(new ShuttleModel("Campus to KashMere Gate",  R.drawable.ic_baseline_directions_bus_24));
-        shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
-        shuttleModelArrayList.add(new ShuttleModel("IFFCO Chowk to Campus", R.drawable.ic_baseline_directions_bus_24));
-        shuttleModelArrayList.add(new ShuttleModel("Campus to KashMere Gate", R.drawable.ic_baseline_directions_bus_24));
-        shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
+
 
         ShuttleAdapter shuttleAdapter = new ShuttleAdapter(getContext(), shuttleModelArrayList);
 

@@ -18,26 +18,27 @@
         android:layout_height="wrap_content">
 
         <!-- ImageVIew to display our Course Image -->
+
+        <!-- Text View to display Course Name -->
         <ImageView
             android:id="@+id/idIVShuttlemage"
-            android:layout_width="100dp"
+            android:layout_width="70dp"
             android:layout_height="100dp"
-            android:layout_marginRight="10dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
             android:contentDescription="@string/app_name"
             android:padding="5dp"
             android:src="@drawable/ic_baseline_directions_bus_24" />
 
-        <!-- Text View to display Course Name -->
         <TextView
             android:id="@+id/idTVShuttleName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:gravity="center_horizontal"
             android:layout_marginTop="10dp"
 
             android:layout_toEndOf="@id/idIVShuttlemage"
+            android:gravity="center_horizontal"
             android:text="shuttle_name"
             android:textColor="@color/black"
             android:textSize="15sp"

@@ -18,11 +18,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-            
         <activity
-            android:name=".ShuttleServiceActivity"
+            android:name=".AdminFunctionsActivity"
             android:exported="false" />
-            
+
         <activity
             android:name=".PreLoaderScreen"
             android:exported="true">
