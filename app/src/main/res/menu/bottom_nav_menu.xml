@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:title="Booking List"
-        android:icon="@drawable/ic_baseline_book_24"
-        android:id="@+id/shuttleBookingFragment2"/>
+<!--    <item-->
+<!--        android:title="Booking List"-->
+<!--        android:icon="@drawable/ic_baseline_book_24"-->
+<!--        android:id="@+id/shuttleBookingFragment2"/>-->
     <item
         android:title="Interaction"
         android:icon="@drawable/ic_baseline_chat_24"
@@ -15,7 +15,7 @@
         android:id="@+id/mealRemindersFragment"/>
     <!--Can be removed-->
     <item
-        android:title="Test for shuttle list"
+        android:title="Available Shuttles"
         android:icon="@drawable/ic_baseline_alarm_24"
         android:id=" @+id/availableShuttlesFragment"/>
 
