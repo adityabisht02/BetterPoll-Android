@@ -13,9 +13,16 @@ The User side of the application is what the students(assuming a college campus)
 ![image](https://user-images.githubusercontent.com/89146189/193855246-7c7c972b-42df-4b8b-8139-30531563f3a1.png)    ![image](https://user-images.githubusercontent.com/89146189/193855373-932be07c-97dd-44b3-a47b-5432589b1147.png)
 
 
-
-
 ![image](https://user-images.githubusercontent.com/89146189/193784532-11302b38-9355-4959-8cd7-7648b9760141.png)
+
+<h2> The Admin Side of the application </h2>
+The admin will be able to add shuttles, add new users and monitor mess attendance and menu.
+
+![image](https://user-images.githubusercontent.com/89146189/200525396-c9c7d566-35d2-4992-8062-be9da8ad2e37.png)
+
+
+![image](https://user-images.githubusercontent.com/89146189/200525174-4184a7ea-077b-4d61-8ba6-1d1333f261cc.png)     ![image](https://user-images.githubusercontent.com/89146189/200525255-9a1b3236-ea4e-4621-9288-85718ebc924d.png)
+
 
 
 ## 😄[CONTRIBUTING GUIDELINES](https://github.com/MohammadKaif1/BetterPoll-Android/blob/readme/CONTRIBUTING.md)
