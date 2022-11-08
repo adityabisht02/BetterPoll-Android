@@ -41,8 +41,8 @@ private FragmentInteractionSectionBinding fragmentInteractionSectionBinding;
 
 
         ArrayList<InteractCardItem> cardItemList=new ArrayList<InteractCardItem>();
-        cardItemList.add(new InteractCardItem("Aditya beta","24/10","Hi i am aditya nice to meet u"));
-        cardItemList.add(new InteractCardItem("Nishit beta","24/10","Hi i am nishit "));
+        cardItemList.add(new InteractCardItem("Aditya ","24/10","Hi i am aditya nice to meet u"));
+        cardItemList.add(new InteractCardItem("Nishit ","24/10","Hi i am nishit "));
 
         postAdapter=new InteractSectionAdapter(getContext(),cardItemList);
         postLayoutManager=new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);

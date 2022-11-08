@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
 //                for basic login without api integration
                 if(name.equals("aditya")){
                     //put admin functions as the destination for testing
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                     startActivity(intent);
                 }
 //                userLoginApi(email);
@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
     //this api only takes email to verify user
     private void userLoginApi(String email) {
         // url to post our data
-        String url = "http://10.0.2.2/login";
+        String url = "http://10.0.2.2:3000/login";
 
         // creating a new variable for our request queue
         RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);

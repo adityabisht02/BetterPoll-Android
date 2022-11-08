@@ -8,9 +8,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="10dp"
         tools:context=".MealRemindersActivity">
 
         <androidx.cardview.widget.CardView
@@ -26,10 +25,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="2dp"
                 android:text="Meal Reminders"
                 android:textSize="18dp"
-                android:textStyle="bold"
-                android:padding="2dp" />
+                android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
