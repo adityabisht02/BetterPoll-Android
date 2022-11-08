@@ -18,8 +18,10 @@ The User side of the application is what the students(assuming a college campus)
 <h2> The Admin Side of the application </h2>
 The admin will be able to add shuttles, add new users and monitor mess attendance and menu.
 
-![image](https://user-images.githubusercontent.com/89146189/200525396-c9c7d566-35d2-4992-8062-be9da8ad2e37.png)![image](https://user-images.githubusercontent.com/89146189/200525255-9a1b3236-ea4e-4621-9288-85718ebc924d.png)
-![image](https://user-images.githubusercontent.com/89146189/200525174-4184a7ea-077b-4d61-8ba6-1d1333f261cc.png)
+![image](https://user-images.githubusercontent.com/89146189/200525396-c9c7d566-35d2-4992-8062-be9da8ad2e37.png)
+
+
+![image](https://user-images.githubusercontent.com/89146189/200525174-4184a7ea-077b-4d61-8ba6-1d1333f261cc.png)     ![image](https://user-images.githubusercontent.com/89146189/200525255-9a1b3236-ea4e-4621-9288-85718ebc924d.png)
 
 
 
