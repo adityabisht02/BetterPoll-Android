@@ -3,7 +3,9 @@ package com.example.betterpoll_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -29,6 +32,11 @@ public class LoginActivity extends AppCompatActivity {
     EditText editTextName;
     EditText editTextEmail;
     Button loginbtn;
+    String name;
+    String phoneNumber;
+    int id;
+    String email;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +48,23 @@ public class LoginActivity extends AppCompatActivity {
 
         editTextName=findViewById(R.id.editTextName1);
         editTextEmail=findViewById(R.id.editTextEmail);
+        editTextPhone=findViewById(R.id.editTextPhoneNumber);
         loginbtn=findViewById(R.id.loginbtn);
+
+        //check if shared preferences already has the data and if it does directly login
+//        if(fetchUserData()!=-1){
+//            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//            startActivity(intent);
+//        }
 
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // do something when the corky is clicked
-
-                String email=editTextEmail.getText().toString();
-                String name=editTextName.getText().toString();
+                 email=editTextEmail.getText().toString();
+                 name=editTextName.getText().toString();
+                 phoneNumber=editTextPhone.getText().toString();
 
 //                for basic login without api integration
                 if(name.equals("aditya")){
@@ -57,9 +72,28 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                     startActivity(intent);
                 }
-//                userLoginApi(email);
+                userLoginApi(email);
             }
         });
+    }
+
+
+    //saves user data to shared preferences
+    private void saveUserData(){
+        sharedPreferences=getSharedPreferences("saveUserData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor= sharedPreferences.edit();
+        editor.putInt("id",id);
+        editor.putString("name",name);
+        editor.putString("email",email);
+        editor.commit();
+        Toast.makeText(LoginActivity.this, "Shared preferences data saved", Toast.LENGTH_LONG).show();
+    }
+
+    //confirms if user is logged by returning the id ,if not logged in returns -1
+    private int fetchUserData(){
+        sharedPreferences=getSharedPreferences("saveUserData",Context.MODE_PRIVATE);
+        id=sharedPreferences.getInt("id", -1);
+        return id;
     }
 
     //this api only takes email to verify user
@@ -85,11 +119,13 @@ public class LoginActivity extends AppCompatActivity {
                     // to json object to extract data from it.
                     JSONObject respObj = new JSONObject(response);
 
-                    // below are the strings which we
-                    // extract from our json object.
-                    String message = respObj.getString("msg");
-                    if(message.equals("You have successfully logged in")){
-                        //if response then use intent to login
+                    // if success is true means we can authenticate the user
+                    boolean success=respObj.getBoolean("success");
+                    id=respObj.getInt("id");
+
+                    if(success){
+                        //if response then use intent to login and save user using shared preferences
+                        saveUserData();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                     }

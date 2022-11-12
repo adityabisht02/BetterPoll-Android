@@ -34,6 +34,8 @@ public class AvailableShuttlesFragment extends Fragment {
     private FragmentAvailableShuttlesBinding availableShuttlesFragment;
 
     ArrayList<ShuttleModel> shuttleModelArrayList;
+    JSONObject responseObject;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +57,7 @@ public class AvailableShuttlesFragment extends Fragment {
         //method to add shuttles from view-shuttles api
         getAvailableShuttles();
 
-        shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
+//        shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
 
 //        Toast.makeText(getContext(),shuttleModelArrayList.get(0).getCourse_name(),Toast.LENGTH_LONG).show();
 
@@ -85,9 +87,11 @@ public class AvailableShuttlesFragment extends Fragment {
                     public void onResponse(String response) {
                         try {
                             JSONObject respObj = new JSONObject(response);
+                            responseObject=respObj;
                             String message = respObj.getString("msg");
 //                            shuttleModelArrayList.add(new ShuttleModel(message,R.drawable.ic_baseline_directions_bus_24));
-                            shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
+                            shuttleModelArrayList.add(new ShuttleModel(message,  R.drawable.ic_baseline_directions_bus_24));
+                        System.out.println(shuttleModelArrayList);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
