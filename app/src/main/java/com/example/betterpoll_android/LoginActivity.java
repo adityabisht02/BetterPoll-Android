@@ -52,10 +52,10 @@ public class LoginActivity extends AppCompatActivity {
         loginbtn=findViewById(R.id.loginbtn);
 
         //check if shared preferences already has the data and if it does directly login
-//        if(fetchUserData()!=-1){
-//            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//            startActivity(intent);
-//        }
+        if(fetchUserData()!=-1){
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
 
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -67,11 +67,11 @@ public class LoginActivity extends AppCompatActivity {
                  phoneNumber=editTextPhone.getText().toString();
 
 //                for basic login without api integration
-                if(name.equals("aditya")){
-                    //put admin functions as the destination for testing
-                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                    startActivity(intent);
-                }
+//                if(name.equals("aditya")){
+//                    //put admin functions as the destination for testing
+//                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+//                    startActivity(intent);
+//                }
                 userLoginApi(email);
             }
         });

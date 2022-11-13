@@ -79,6 +79,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/brktextView2" />
 
                 <TextView
+                    android:id="@+id/breakfastCode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
@@ -144,6 +145,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/lnchtextView2" />
 
                 <TextView
+                    android:id="@+id/lunchCode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
@@ -209,6 +211,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/snktextView2" />
 
                 <TextView
+                    android:id="@+id/snacksCode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
@@ -274,6 +277,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/dnrtextView2" />
 
                 <TextView
+                    android:id="@+id/dinnerCode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
