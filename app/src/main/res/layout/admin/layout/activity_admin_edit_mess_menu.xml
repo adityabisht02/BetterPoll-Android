@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/textViewAdd"
+        android:layout_width="408dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="52dp"
+        android:background="#FACFCF"
+        android:fontFamily="sans-serif"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:gravity="center"
+        android:text="Edit Mess menu"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDay"
+        android:layout_width="294dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="426dp"
+        android:ems="10"
+        android:hint="Day"
+        android:inputType="textPersonName"
+        android:text="Day"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdd" />
+
+    <EditText
+        android:id="@+id/editTextBreakfastMenu"
+        android:layout_width="297dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Breakfast Menu"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLunchMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDay" />
+
+    <EditText
+        android:id="@+id/editTextLunchMenu"
+        android:layout_width="294dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="257dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Lunch menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextSnacksMenu"
+        android:layout_width="304dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="171dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Snacks Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLunchMenu" />
+
+    <EditText
+        android:id="@+id/editTextDinnerMenu"
+        android:layout_width="292dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="87dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Dinner Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSnacksMenu" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="25dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDinnerMenu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
