@@ -19,6 +19,16 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".AdminMessSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMessAttendanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminEditMessMenuActivity"
+            android:exported="false" />
         <activity
             android:name=".AdminFunctionsActivity"
             android:exported="true">

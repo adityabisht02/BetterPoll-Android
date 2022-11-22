@@ -15,11 +15,11 @@ public class AdminMessSettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mess_settings);
+        setContentView(R.layout.activity_admin_mess_settings);
 
 
-        editMessMenuBtn = findViewById(R.id.btnEditMenu);
-        enterMessCodeBtn = findViewById(R.id.btnMessCode);
+        editMessMenuBtn = findViewById(R.id.btnSettingsEditMenu);
+        enterMessCodeBtn = findViewById(R.id.btnSettingsMessCode);
 
 
         enterMessCodeBtn.setOnClickListener(new View.OnClickListener() {

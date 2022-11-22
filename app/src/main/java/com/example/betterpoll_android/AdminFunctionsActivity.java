@@ -18,9 +18,9 @@ public class AdminFunctionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_functions);
 
-        addUserBtn = findViewById(R.id.btnEditMenu);
-        messSettingsBtn = findViewById(R.id.btnMessCode);
-        addShuttlesBtn = findViewById(R.id.btnAddShuttles);
+        addUserBtn = findViewById(R.id.btnSettingsEditMenu);
+        messSettingsBtn = findViewById(R.id.btnSettingsMessCode);
+        addShuttlesBtn = findViewById(R.id.btnSettingsAddShuttles);
 
 
         addUserBtn.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +48,7 @@ public class AdminFunctionsActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(AdminFunctionsActivity.this, AdminMessSettingsActivity.class);
-//                startActivity(intent);
+                startActivity(intent);
                 Toast.makeText(AdminFunctionsActivity.this, "Butto clocked", Toast.LENGTH_LONG).show();
 
             }

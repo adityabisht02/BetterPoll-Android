@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextDay"
+        android:id="@+id/editTextDayInput"
         android:layout_width="294dp"
         android:layout_height="50dp"
         android:layout_marginStart="58dp"
@@ -59,7 +59,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextLunchMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDay" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDayInput" />
 
     <EditText
         android:id="@+id/editTextLunchMenu"
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextSnacksMenu" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnEditMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="147dp"
