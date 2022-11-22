@@ -31,10 +31,10 @@ public class AdminAddUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_new_user);
 
-        editTextEmail=(EditText)findViewById(R.id.editTextAddUserEmail);
+        editTextEmail=(EditText)findViewById(R.id.editTextBusNumber);
         editTextPhone=(EditText)findViewById(R.id.editTextAddUserPhoneNumber);
-        editTextName=(EditText)findViewById(R.id.editTextAddUserName);
-        submit=findViewById(R.id.buttonAddUser);
+        editTextName=(EditText)findViewById(R.id.editTextTripName);
+        submit=findViewById(R.id.btnAddShuttle);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
