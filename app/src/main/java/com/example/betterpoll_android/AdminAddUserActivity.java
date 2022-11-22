@@ -30,25 +30,28 @@ public class AdminAddUserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_new_user);
-        editTextEmail=findViewById(R.id.editTextEmail);
-        editTextPhone=findViewById(R.id.editTextPhoneNumber);
-        editTextName=findViewById(R.id.editTextUserName);
+
+        editTextEmail=(EditText)findViewById(R.id.editTextAddUserEmail);
+        editTextPhone=(EditText)findViewById(R.id.editTextAddUserPhoneNumber);
+        editTextName=(EditText)findViewById(R.id.editTextAddUserName);
         submit=findViewById(R.id.buttonAddUser);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // do something when the corky is clicked
-                email=editTextEmail.getText().toString();
+
                 name=editTextName.getText().toString();
+                email=editTextEmail.getText().toString();
                 phoneNumber=editTextPhone.getText().toString();
                 addUserApi(name,email,phoneNumber);
+                Toast.makeText(AdminAddUserActivity.this, "Submitted", Toast.LENGTH_SHORT).show();
             }
         });
 
     }
 
-    private void addUserApi(String name,String email,String phone) {
+    private void addUserApi(String NAME,String EMAIL,String phone) {
         // url to post our data
         String url = "http://10.0.2.2:3000/admin/add-new-user";
 
@@ -75,11 +78,11 @@ public class AdminAddUserActivity extends AppCompatActivity {
 
                     if(success){
                         //if response then we tell admin that user is saved
-                        Toast.makeText(AdminAddUserActivity.this,"Authentication failed !",Toast.LENGTH_LONG).show();
+                        Toast.makeText(AdminAddUserActivity.this,"User Added !",Toast.LENGTH_LONG).show();
 
                     }
                     else{
-                        Toast.makeText(AdminAddUserActivity.this,"Authentication failed !",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminAddUserActivity.this,"Failed to add user error response from api !",Toast.LENGTH_SHORT).show();
 
                     }
                 } catch (JSONException e) {
@@ -102,8 +105,8 @@ public class AdminAddUserActivity extends AppCompatActivity {
 
                 // on below line we are passing our key
                 // and value pair to our parameters.
-                params.put("email", email);
-                params.put("name", name);
+                params.put("email", EMAIL);
+                params.put("name", NAME);
                 params.put("phone", phone);
 
 

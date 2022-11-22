@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class AdminFunctionsActivity extends AppCompatActivity {
 
@@ -47,7 +48,8 @@ public class AdminFunctionsActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(AdminFunctionsActivity.this, AdminMessSettingsActivity.class);
-                startActivity(intent);
+//                startActivity(intent);
+                Toast.makeText(AdminFunctionsActivity.this, "Butto clocked", Toast.LENGTH_LONG).show();
 
             }
         });
