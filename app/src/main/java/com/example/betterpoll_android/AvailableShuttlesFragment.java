@@ -28,12 +28,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 
 public class AvailableShuttlesFragment extends Fragment {
     private FragmentAvailableShuttlesBinding availableShuttlesFragment;
 
-    ArrayList<ShuttleModel> shuttleModelArrayList;
     JSONObject responseObject;
 
     @Override
@@ -49,35 +49,45 @@ public class AvailableShuttlesFragment extends Fragment {
 
         availableShuttlesFragment = FragmentAvailableShuttlesBinding.inflate(inflater, container, false);
         View root = availableShuttlesFragment.getRoot();
-        RecyclerView shuttleRV = root.findViewById(R.id.idRVCourse);
 
-        // Here, we have created new array list and added data to it
-        shuttleModelArrayList= new ArrayList<ShuttleModel>();
-
-        //method to add shuttles from view-shuttles api
-        getAvailableShuttles();
-
-        shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
-
-
-//        Toast.makeText(getContext(),shuttleModelArrayList.get(0).getCourse_name(),Toast.LENGTH_LONG).show();
-
-        ShuttleAdapter shuttleAdapter = new ShuttleAdapter(getContext(), shuttleModelArrayList);
-
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-
-
-        shuttleRV.setLayoutManager(linearLayoutManager);
-        shuttleRV.setAdapter(shuttleAdapter);
 
         return root;
 
     }
 
-     public void getAvailableShuttles() {
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+
+        RecyclerView shuttleRV = view.findViewById(R.id.idRVCourse);
+
+
+
+        //method to add shuttles from view-shuttles api
+        ArrayList<ShuttleModel> shuttleModelArrayList=getAvailableShuttles();
+
+
+//        shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
+
+
+//        Toast.makeText(getContext(),shuttleModelArrayList.get(0).getCourse_name(),Toast.LENGTH_LONG).show();
+
+        ShuttleAdapter shuttleAdapter = new ShuttleAdapter(getActivity(), shuttleModelArrayList);
+
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+
+
+        shuttleRV.setLayoutManager(linearLayoutManager);
+        shuttleRV.setAdapter(shuttleAdapter);
+
+    }
+
+    public ArrayList<ShuttleModel> getAvailableShuttles() {
         // url to post our data
         String url = "http://10.0.2.2:3000/view-shuttles";
+// Here, we have created new array list and added data to it
+        ArrayList<ShuttleModel> shuttleModelArrayList= new ArrayList<ShuttleModel>();
 
         RequestQueue queue = Volley.newRequestQueue(getContext());
 
@@ -87,18 +97,25 @@ public class AvailableShuttlesFragment extends Fragment {
                     @Override
                     public void onResponse(String response) {
                         try {
+
                             JSONObject respObj = new JSONObject(response);
-                            responseObject=respObj;
+
                             String message = respObj.getString("msg");
 //                            shuttleModelArrayList.add(new ShuttleModel(message,R.drawable.ic_baseline_directions_bus_24));
                             shuttleModelArrayList.add(new ShuttleModel(message,  R.drawable.ic_baseline_directions_bus_24));
-                        System.out.println(shuttleModelArrayList);
+                        //System.out.println(shuttleModelArrayList);
+
+
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
 
                     }
-                }, new Response.ErrorListener() {
+
+                }
+
+                , new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(getContext(),"Error response !!",Toast.LENGTH_LONG).show();
@@ -107,6 +124,8 @@ public class AvailableShuttlesFragment extends Fragment {
 
 // Add the request to the RequestQueue.
         queue.add(stringRequest);
+
+        return shuttleModelArrayList;
 
     }
 }

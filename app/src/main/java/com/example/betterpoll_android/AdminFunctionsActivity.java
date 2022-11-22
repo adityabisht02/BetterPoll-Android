@@ -1,32 +1,24 @@
 package com.example.betterpoll_android;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
-import com.example.betterpoll_android.databinding.ActivityMainBinding;
 public class AdminFunctionsActivity extends AppCompatActivity {
 
 
-    Button addUserBtn, editMessMenuBtn, addShuttlesBtn;
+    Button addUserBtn, messSettingsBtn, addShuttlesBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_functions);
 
-        addUserBtn = findViewById(R.id.btnAddUsers);
-        editMessMenuBtn = findViewById(R.id.btnmesssettings);
+        addUserBtn = findViewById(R.id.btnEditMenu);
+        messSettingsBtn = findViewById(R.id.btnMessCode);
         addShuttlesBtn = findViewById(R.id.btnAddShuttles);
 
 
@@ -50,11 +42,11 @@ public class AdminFunctionsActivity extends AppCompatActivity {
             }
         });
 
-        editMessMenuBtn.setOnClickListener(new View.OnClickListener() {
+        messSettingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(AdminFunctionsActivity.this, AdminEditMessMenuActivity.class);
+                Intent intent = new Intent(AdminFunctionsActivity.this, AdminMessSettingsActivity.class);
                 startActivity(intent);
 
             }

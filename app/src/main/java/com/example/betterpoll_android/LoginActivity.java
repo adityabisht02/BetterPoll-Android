@@ -67,12 +67,12 @@ public class LoginActivity extends AppCompatActivity {
                  phoneNumber=editTextPhone.getText().toString();
 
 //                for basic login without api integration
-//                if(name.equals("aditya")){
-//                    //put admin functions as the destination for testing
-//                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-//                    startActivity(intent);
-//                }
-                userLoginApi(email);
+                if(name.equals("aditya")){
+                    //put admin functions as the destination for testing
+                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    startActivity(intent);
+                }
+//                userLoginApi(email);
             }
         });
     }

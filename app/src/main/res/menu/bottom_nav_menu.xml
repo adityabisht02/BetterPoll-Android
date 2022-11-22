@@ -16,7 +16,7 @@
     <!--Can be removed-->
     <item
         android:title="Available Shuttles"
-        android:icon="@drawable/ic_baseline_alarm_24"
+        android:icon="@drawable/ic_baseline_directions_bus_24"
         android:id=" @+id/availableShuttlesFragment"/>
 
 </menu>
