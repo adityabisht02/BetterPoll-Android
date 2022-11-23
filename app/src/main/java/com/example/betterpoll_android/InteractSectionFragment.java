@@ -8,10 +8,21 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.betterpoll_android.databinding.FragmentInteractionSectionBinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -19,9 +30,11 @@ import java.util.ArrayList;
 public class InteractSectionFragment extends Fragment {
 private FragmentInteractionSectionBinding fragmentInteractionSectionBinding;
 
-     RecyclerView postrecyclerView;
+     RecyclerView postRV;
      InteractSectionAdapter postAdapter;
      LinearLayoutManager postLayoutManager;
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,23 +50,78 @@ private FragmentInteractionSectionBinding fragmentInteractionSectionBinding;
         fragmentInteractionSectionBinding = FragmentInteractionSectionBinding.inflate(inflater, container, false);
         View root = fragmentInteractionSectionBinding.getRoot();
 
-        postrecyclerView=root.findViewById(R.id.idRVPost);
 
-
-        ArrayList<InteractCardItem> cardItemList=new ArrayList<InteractCardItem>();
-        cardItemList.add(new InteractCardItem("Aditya ","24/10","Hi i am aditya nice to meet u"));
-        cardItemList.add(new InteractCardItem("Nishit ","24/10","Hi i am nishit "));
-
-
-
-
-        postAdapter=new InteractSectionAdapter(getContext(),cardItemList);
-        postLayoutManager=new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-
-        postrecyclerView.setLayoutManager(postLayoutManager);
-        postrecyclerView.setAdapter(postAdapter);
 
         return root;
         //return inflater.inflate(R.layout.fragment_video, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        postRV=view.findViewById(R.id.idRVPost);
+
+        getAvailableChats();
+    }
+
+
+    public void getAvailableChats() {
+        // url to post our data
+        String url = "http://10.0.2.2:3000/view-all-posts";
+// Here, we have created new array list and added data to it
+        ArrayList<InteractCardItem> cardItemList= new ArrayList<InteractCardItem>();
+
+        RequestQueue queue = Volley.newRequestQueue(getContext());
+
+// Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+
+                            JSONObject respObj = new JSONObject(response);
+
+                            String message = respObj.getString("msg");
+                            JSONArray results=respObj.getJSONArray("results");
+
+//                            shuttleModelArrayList.add(new ShuttleModel(message,R.drawable.ic_baseline_directions_bus_24));
+
+                            for(int i=0;i<results.length();i++) {
+                                JSONObject obj=results.getJSONObject(i);
+                                String name=obj.getString("name");
+                                String content=obj.getString("content");
+                                String date=obj.getString("date");
+                                cardItemList.add(new InteractCardItem(name,content,date ));
+                            }
+
+                            //System.out.println(shuttleModelArrayList)
+
+                            postAdapter=new InteractSectionAdapter(getContext(),cardItemList);
+                            postLayoutManager=new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+                            postRV.setLayoutManager(postLayoutManager);
+                            postRV.setAdapter(postAdapter);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(getContext(),"Error !!",Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+
+                }
+
+                , new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getContext(),"Error response !!",Toast.LENGTH_LONG).show();
+            }
+        });
+
+// Add the request to the RequestQueue.
+        queue.add(stringRequest);
+
+
+
     }
 }
