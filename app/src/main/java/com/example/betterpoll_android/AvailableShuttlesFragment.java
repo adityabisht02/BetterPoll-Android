@@ -35,6 +35,7 @@ public class AvailableShuttlesFragment extends Fragment {
     private FragmentAvailableShuttlesBinding availableShuttlesFragment;
 
     JSONObject responseObject;
+    RecyclerView shuttleRV;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,12 +60,12 @@ public class AvailableShuttlesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
 
-        RecyclerView shuttleRV = view.findViewById(R.id.idRVCourse);
+        shuttleRV = view.findViewById(R.id.idRVCourse);
 
 
 
         //method to add shuttles from view-shuttles api
-        ArrayList<ShuttleModel> shuttleModelArrayList=getAvailableShuttles();
+       getAvailableShuttles();
 
 
 //        shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
@@ -72,18 +73,10 @@ public class AvailableShuttlesFragment extends Fragment {
 
 //        Toast.makeText(getContext(),shuttleModelArrayList.get(0).getCourse_name(),Toast.LENGTH_LONG).show();
 
-        ShuttleAdapter shuttleAdapter = new ShuttleAdapter(getActivity(), shuttleModelArrayList);
-
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-
-
-        shuttleRV.setLayoutManager(linearLayoutManager);
-        shuttleRV.setAdapter(shuttleAdapter);
 
     }
 
-    public ArrayList<ShuttleModel> getAvailableShuttles() {
+    public void getAvailableShuttles() {
         // url to post our data
         String url = "http://10.0.2.2:3000/view-shuttles";
 // Here, we have created new array list and added data to it
@@ -105,7 +98,14 @@ public class AvailableShuttlesFragment extends Fragment {
                             shuttleModelArrayList.add(new ShuttleModel(message,  R.drawable.ic_baseline_directions_bus_24));
                         //System.out.println(shuttleModelArrayList);
 
+                            ShuttleAdapter shuttleAdapter = new ShuttleAdapter(getActivity(), shuttleModelArrayList);
 
+
+                            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+
+
+                            shuttleRV.setLayoutManager(linearLayoutManager);
+                            shuttleRV.setAdapter(shuttleAdapter);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -125,7 +125,7 @@ public class AvailableShuttlesFragment extends Fragment {
 // Add the request to the RequestQueue.
         queue.add(stringRequest);
 
-        return shuttleModelArrayList;
+
 
     }
 }
