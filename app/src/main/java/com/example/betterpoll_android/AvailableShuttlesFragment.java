@@ -22,6 +22,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.betterpoll_android.databinding.FragmentAvailableShuttlesBinding;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -94,8 +95,20 @@ public class AvailableShuttlesFragment extends Fragment {
                             JSONObject respObj = new JSONObject(response);
 
                             String message = respObj.getString("msg");
-//                            shuttleModelArrayList.add(new ShuttleModel(message,R.drawable.ic_baseline_directions_bus_24));
-                            shuttleModelArrayList.add(new ShuttleModel(message,  R.drawable.ic_baseline_directions_bus_24));
+
+                            JSONArray results=respObj.getJSONArray("results");
+
+//
+
+                            for(int i=0;i<results.length();i++) {
+                                JSONObject obj=results.getJSONObject(i);
+                                String busno=obj.getString("busno");
+                                String tripName=obj.getString("tripName");
+
+                                shuttleModelArrayList.add(new ShuttleModel(tripName,R.drawable.ic_baseline_directions_bus_24));
+                            }
+
+
                         //System.out.println(shuttleModelArrayList);
 
                             ShuttleAdapter shuttleAdapter = new ShuttleAdapter(getActivity(), shuttleModelArrayList);

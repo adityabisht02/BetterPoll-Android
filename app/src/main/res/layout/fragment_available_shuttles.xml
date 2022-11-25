@@ -10,18 +10,19 @@
         android:layout_marginBottom="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <TextView
-        android:background="#F3D8C9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Shuttle_Space"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:paddingVertical="10dp"
-android:layout_marginTop="?attr/actionBarSize"
 
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:background="#FBFAF9"
+            android:paddingVertical="10dp"
+            android:text="Available Shuttles"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+
+            />
      <androidx.recyclerview.widget.RecyclerView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
@@ -30,13 +31,14 @@ android:layout_marginTop="?attr/actionBarSize"
 
          />
     </LinearLayout>
-            <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Book a Shuttle"
-            android:background="@color/orange"
-            android:layout_gravity="center|bottom"
-            android:layout_marginVertical="?attr/actionBarSize"
-            />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginVertical="?attr/actionBarSize"
+        android:background="@color/orange"
+        android:text="Book a Shuttle"
+        android:visibility="invisible" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
