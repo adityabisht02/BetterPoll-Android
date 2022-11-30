@@ -14,6 +14,13 @@ This project will have an admin side, the admin will be able to add services, ti
 2. You should be able to make requests to the locally running server from the emulator (use the ip :"http://10.0.2.2:3000/" to access the server from the emulator).
 
 
+<h2>App Flow </h2>
+<h4> User Side </h4>
+1. The user will need to login once ,only if the admin has created this user will he be able to login. <br>
+2. On logging in the user will be remembered using SharedPreferences, the user id will be saved locally as well. <br>
+3. The user can now interct with the app, he can view the mess menu(updates automatically), he can interact with other users, and he can view available shuttles for booking. All of these are fetched from the backend. <br>
+4. The user can use his mess code to log his attendance at the mess.
+
 
 <h2> The User Side of the application : </h2>
 The User side of the application is what the students(assuming a college campus) will see and interact with.
