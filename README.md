@@ -7,6 +7,14 @@ For the backend repo you can check out : https://github.com/adityabisht02/Better
 
 This project will have an admin side, the admin will be able to add services, timings etc. and the other users shall be able to see these services.
 
+
+<h2>Connecting to the Backend Repository </h2>
+
+1. Follow the setup steps as mentioned in the readme of the backend repo : https://github.com/adityabisht02/BetterPoll-Backend.
+2. You should be able to make requests to the locally running server from the emulator (use the ip :"http://10.0.2.2:3000/" to access the server from the emulator).
+
+
+
 <h2> The User Side of the application : </h2>
 The User side of the application is what the students(assuming a college campus) will see and interact with.
 
@@ -24,15 +32,7 @@ The admin will be able to add shuttles, add new users and monitor mess attendanc
 ![image](https://user-images.githubusercontent.com/89146189/200525174-4184a7ea-077b-4d61-8ba6-1d1333f261cc.png)     ![image](https://user-images.githubusercontent.com/89146189/200525255-9a1b3236-ea4e-4621-9288-85718ebc924d.png)
 
 
-<h2>Connecting to the Backend Repository </h2>
-
-1. Follow the setup steps as mentioned in the readme of the backend repo : https://github.com/adityabisht02/BetterPoll-Backend.
-2. You should be able to make requests to the locally running server from the emulator (use the ip :"http://10.0.2.2:3000/" to access the emulator from the server).
-
-
 ## 😄[CONTRIBUTING GUIDELINES](https://github.com/MohammadKaif1/BetterPoll-Android/blob/readme/CONTRIBUTING.md)
-
-
 
 
 
