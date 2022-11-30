@@ -21,6 +21,10 @@ This project will have an admin side, the admin will be able to add services, ti
 3. The user can now interct with the app, he can view the mess menu(updates automatically), he can interact with other users, and he can view available shuttles for booking. All of these are fetched from the backend. <br>
 4. The user can use his mess code to log his attendance at the mess.
 
+<h4> Admin Side </h4>
+1. The admin can create new users who can access the app.
+2. The admin can add new shuttles,edit the mess menu.
+3. The admin can also verify users using their user code.
 
 <h2> The User Side of the application : </h2>
 The User side of the application is what the students(assuming a college campus) will see and interact with.
