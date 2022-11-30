@@ -22,9 +22,9 @@ This project will have an admin side, the admin will be able to add services, ti
 4. The user can use his mess code to log his attendance at the mess.
 
 <h4> Admin Side </h4>
-1. The admin can create new users who can access the app.
-2. The admin can add new shuttles,edit the mess menu.
-3. The admin can also verify users using their user code.
+1. The admin can create new users who can access the app.<br>
+2. The admin can add new shuttles,edit the mess menu.<br>
+3. The admin can also verify users using their user code.<br>
 
 <h2> The User Side of the application : </h2>
 The User side of the application is what the students(assuming a college campus) will see and interact with.
