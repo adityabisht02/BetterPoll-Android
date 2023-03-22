@@ -11,10 +11,12 @@
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true"
     >
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="4dp">
+        android:layout_margin="4dp"
+        android:background="#F8E6E6">
 
         <ImageView
             android:id="@+id/imageView"
@@ -25,26 +27,25 @@
             app:srcCompat="@drawable/ic_baseline_person_24" />
 
         <TextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aditya Bisht"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/imageView"
-            android:id="@+id/name"
-            />
+            android:text="Aditya Bisht"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <TextView
+            android:id="@+id/postDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Posted on 17/11/2022"
-            android:layout_marginStart="8dp"
-            android:textSize="12sp"
             android:layout_below="@+id/name"
-            android:textStyle="normal"
+            android:layout_marginStart="8dp"
             android:layout_toEndOf="@+id/imageView"
-            android:id="@+id/postDate"
-            />
+            android:text="Posted on 17/11/2022"
+            android:textSize="12sp"
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/postContent"

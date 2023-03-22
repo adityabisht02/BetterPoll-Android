@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.betterpoll_android">
-    <!--permissions for INTERNET-->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- permissions for INTERNET -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,16 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BetterPollandroid">
-
+        <activity
+            android:name=".CreateGatepassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreatePostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GatepassDetailsActivity"
+            android:exported="false"/>
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-        <!-- android:theme="@style/Theme.BetterPollandroid" -->
-        
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".AdminMessSettingsActivity"
             android:exported="false" />
@@ -31,31 +43,16 @@
             android:exported="false" />
         <activity
             android:name=".AdminFunctionsActivity"
-            android:exported="true">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-
+            android:exported="false" />
         <activity
             android:name=".AdminAddUserActivity"
             android:exported="false" />
-
         <activity
             android:name=".AdminAddShuttleActivity"
             android:exported="false" />
-
-
-
-
         <activity
             android:name=".PreLoaderScreen"
-            android:exported="false"/>
-
+            android:exported="false" />
 
     </application>
 

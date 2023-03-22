@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -37,6 +38,7 @@ public class AvailableShuttlesFragment extends Fragment {
 
     JSONObject responseObject;
     RecyclerView shuttleRV;
+    Button btnBookShuttles;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -62,12 +64,21 @@ public class AvailableShuttlesFragment extends Fragment {
 
 
         shuttleRV = view.findViewById(R.id.idRVCourse);
-
+        btnBookShuttles=view.findViewById(R.id.btnBookShuttles);
 
 
         //method to add shuttles from view-shuttles api
        getAvailableShuttles();
 
+
+        btnBookShuttles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getActivity(), ShuttleBookingActivity.class);
+                startActivity(myIntent);
+
+            }
+        });
 
 //        shuttleModelArrayList.add(new ShuttleModel("Campus to IFFCO Chowk",  R.drawable.ic_baseline_directions_bus_24));
 

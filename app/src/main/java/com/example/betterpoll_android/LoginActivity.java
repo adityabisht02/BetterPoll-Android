@@ -52,10 +52,10 @@ public class LoginActivity extends AppCompatActivity {
         loginbtn=findViewById(R.id.loginbtn);
 
         //check if shared preferences already has the data and if it does directly login
-//        if(fetchUserData()!=-1){
-//            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//            startActivity(intent);
-//        }
+        if(fetchUserData()!=-1){
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
 
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
